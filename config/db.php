@@ -2,7 +2,7 @@
 
 $host = "sql206.infinityfree.com";
 $user = "if0_42015353";
-$password = "YOUR_VPANEL_PASSWORD";
+$password = "lZxrOgDZMws8e";
 $database = "if0_42015353_samrat";
 
 $conn = mysqli_connect(
