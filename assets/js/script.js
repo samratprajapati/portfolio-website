@@ -338,7 +338,7 @@ themeToggle.onclick = () => {
         );
 
         themeToggle.innerHTML =
-        '<i class="fa-solid fa-sun"></i>';
+        '<i class="fa-solid fa-moon"></i>';
 
     }
     else{
@@ -349,7 +349,7 @@ themeToggle.onclick = () => {
         );
 
         themeToggle.innerHTML =
-        '<i class="fa-solid fa-moon"></i>';
+        '<i class="fa-solid fa-sun"></i>';
 
     }
 
@@ -363,7 +363,7 @@ if(localStorage.getItem("theme") === "light"){
     body.classList.add("light-mode");
 
     themeToggle.innerHTML =
-    '<i class="fa-solid fa-sun"></i>';
+    '<i class="fa-solid fa-moon"></i>';
 
 }
 

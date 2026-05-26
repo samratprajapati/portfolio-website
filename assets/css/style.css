@@ -600,6 +600,123 @@ section{
 
 }
 
+/* =========================
+   MOBILE NAVBAR LIGHT MODE
+========================= */
+
+@media(max-width:768px){
+
+    
+
+    body.light-mode .navbar{
+
+        background: white !important;
+
+    }
+
+    body.light-mode .navbar a{
+
+        color: #0f172a !important;
+
+    }
+
+    body.light-mode .navbar a:hover{
+
+        color: #38bdf8 !important;
+
+    }
+
+    body.light-mode .menu-btn{
+
+        color: #0f172a;
+
+    }
+
+}
+   /* =========================
+   MOBILE NAVBAR FIX
+========================= */
+
+@media(max-width:768px){
+
+    .header{
+
+        overflow: visible;
+
+    }
+    .header .theme-toggle{
+        position: relative;
+        right: 5px;
+    }
+
+    .navbar{
+
+        position: fixed;
+
+        top: 80px;
+
+        left: -100%;
+
+        width: 100%;
+
+        max-height: calc(100vh - 80px);
+
+        overflow-y: auto;
+
+        background: #020617;
+
+        display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+        flex-direction: column;
+
+        padding: 20px;
+
+        transition: left 0.3s ease;
+
+        z-index: 9999;
+
+    }
+
+    .navbar.active{
+
+        left: 0;
+
+    }
+
+    .navbar a{
+
+        display: block;
+
+        padding: 15px 0;
+
+        font-size: 18px;
+
+    }
+
+}
+
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+@media(max-width:768px){
+
+    body.light-mode .navbar{
+
+        background: white;
+
+    }
+
+    body.light-mode .navbar a{
+
+        color: #0f172a;
+
+    }
+
+}
 
 /* Admin Table */
 
@@ -1790,39 +1907,7 @@ body.light-mode .footer{
 
 @media(max-width:768px){
 
-    .menu-btn{
-
-        display: block;
-
-    }
-
-    .navbar{
-
-        position: absolute;
-        top: 100%;
-        left: -100%;
-        width: 100%;
-        background: #020617;
-        flex-direction: column;
-        padding: 20px 0;
-        transition: 0.3s;
-
-    }
-
-    .navbar.active{
-
-        left: 0;
-
-    }
-
-    .navbar a{
-
-        display: block;
-        margin: 15px 0;
-        text-align: center;
-
-    }
-
+    
 
     /* Hero */
 
@@ -2755,36 +2840,8 @@ table tr:hover{
 
 @media(max-width:768px){
 
-    .navbar{
-
-        position: absolute;
-
-        top: 100%;
-        left: 0;
-
-        width: 100%;
-
-        background: #0f172a;
-
-        flex-direction: column;
-
-        padding: 20px;
-
-        display: none;
-
-    }
-
-    .navbar.active{
-
-        display: flex;
-
-    }
-
-    .menu-btn{
-
-        display: block;
-
-    }
+    
+   
 
     .hero{
 
