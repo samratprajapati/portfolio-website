@@ -63,11 +63,9 @@ if(isset($_POST['send'])){
 
     $mail->addAddress($email);
 
-
-    $reset_link =
-
-    "http://localhost/portfolio/admin/reset-password.php?token=$token";
-
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
+    $reset_link = $protocol . $host . dirname($_SERVER['PHP_SELF']) . "/reset-password.php?token=" . urlencode($token);
 
     $mail->isHTML(true);
 
