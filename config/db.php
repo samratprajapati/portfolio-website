@@ -1,21 +1,20 @@
 <?php
 
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "samrat";
+$host = "sql206.infinityfree.com";
+$user = "if0_42015353";
+$password = "YOUR_VPANEL_PASSWORD";
+$database = "if0_42015353_samrat";
 
 $conn = mysqli_connect(
     $host,
     $user,
     $password,
-    $database,
-    4306
+    $database
 );
 
 if(!$conn){
 
-    die("Database Connection Failed");
+    die("Database Connection Failed: " . mysqli_connect_error());
 
 }
 
