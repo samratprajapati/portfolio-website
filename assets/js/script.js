@@ -325,8 +325,12 @@ const themeToggle =
 document.querySelector(".theme-toggle");
 
 const body = document.body;
+const logoText = document.getElementById("logo-text");
+const herodescription = document.getElementById("hero-description");
+const aboutdescription = document.getElementById("about-description");
 
 themeToggle.onclick = () => {
+
 
     body.classList.toggle("light-mode");
 
@@ -339,6 +343,9 @@ themeToggle.onclick = () => {
 
         themeToggle.innerHTML =
         '<i class="fa-solid fa-moon"></i>';
+        logoText.style.color = "#000";
+        herodescription.style.color = "#000";
+        aboutdescription.style.color = "#000";
 
     }
     else{
@@ -350,11 +357,12 @@ themeToggle.onclick = () => {
 
         themeToggle.innerHTML =
         '<i class="fa-solid fa-sun"></i>';
-
+        logoText.style.color = "#fff";
+        herodescription.style.color = "#fff";
+        aboutdescription.style.color = "#fff";
     }
 
 };
-
 
 // Load Saved Theme
 
@@ -364,11 +372,11 @@ if(localStorage.getItem("theme") === "light"){
 
     themeToggle.innerHTML =
     '<i class="fa-solid fa-moon"></i>';
-
+    logoText.style.color = "#000";
+        herodescription.style.color = "#000";
+        aboutdescription.style.color = "#000";
+   
 }
-
-
-
 
 // Project Modal
 

@@ -2,459 +2,427 @@
 include 'config/db.php';
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduSamrat Portfolio</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EduSamrat Portfolio</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <div class="scroll-progress"
-        id="scrollProgress">
+        <div class="scroll-progress"
+            id="scrollProgress">
 
-    </div>
+        </div>
 
-    <!-- Loader -->
+        <!-- Loader -->
 
-    <div class="loader">
+        <div class="loader">
 
-        <div class="loader-content">
+            <div class="loader-content">
 
+                <!-- Circle Image -->
 
-            <!-- Circle Image -->
+                <div class="loader-image">
 
-            <div class="loader-image">
+                    <img src="assets/images/img.png"
+                        alt="Profile">
+                    <h1>
+
+                        samrat prajapati
+
+                    </h1>
+                </div>
+
+                <!-- Progress Bar -->
+
+                <div class="loader-bar">
+
+                    <div class="loader-progress"></div>
+
+                </div>
+
+                <!-- Percentage -->
+
+                <h2 id="loader-percent">
+
+                    0%
+
+                </h2>
+
+            </div>
+
+        </div>
+
+        <!-- Header -->
+        <!-- Navbar Start -->
+        <header class="header">
+
+            <a href="index.php" class="logo">
 
                 <img src="assets/images/img.png"
-                    alt="Profile">
-                <h1>
+                    alt="Logo">
 
-                    samrat prajapati
+                <span id="logo-text">
 
-                </h1>
-            </div>
+                    Samrat Prajapati
 
-
-            <!-- Progress Bar -->
-
-            <div class="loader-bar">
-
-                <div class="loader-progress"></div>
-
-            </div>
-
-
-            <!-- Percentage -->
-
-            <h2 id="loader-percent">
-
-                0%
-
-            </h2>
-
-        </div>
-
-    </div>
-
-
-    <!-- Header -->
-    <!-- Navbar Start -->
-    <header class="header">
-
-        <a href="index.php" class="logo">
-
-    <img src="assets/images/img.png"
-    alt="Logo">
-
-    <span>
-
-        Samrat Prajapati
-
-    </span>
-
-</a>
-
-       <nav class="navbar">
-
-    <a href="samrat.php">Home</a>
-
-    <a href="#about">About</a>
-
-    <a href="#skills">Skills</a>
-
-    <a href="#projects">Projects</a>
-
-    <a href="#certificates">
-
-    Certificates
-
-</a>
-
-    <a href="#studyhub">StudyHub</a>
-
-    <a href="#contact">Contact</a>
-    
-
-</nav>
-<div class="theme-toggle">
-
-    <i class="fa-solid fa-moon"></i>
-
-</div>
-        <div class="menu-btn">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-
-    </header>
-    <!-- Navbar End -->
-
-    <!--hero_section-->
-    <section class="hero" id="home">
-
-        <div class="hero-content">
-
-            <h3>Hello, It's Me</h3>
-
-            <h1>Samrat Prajapati</h1>
-
-            <h2>I'm a <span>Full Stack Developer</span></h2>
-
-            <p>
-                I create modern responsive websites using
-                HTML, CSS, JavaScript, PHP and MySQL.
-            </p>
-
-            <div class="social-icons">
-
-                <a href="https://github.com/samratprajapati"><i class="fa-brands fa-github"></i></a>
-
-                <a href="https://linkedin.com/in/samratprajapati"><i class="fa-brands fa-linkedin"></i></a>
-
-                <a href="https://instagram.com/mathsamrat"><i class="fa-brands fa-instagram"></i></a>
-
-            </div>
-
-            <?php
-
-            $resume_query = mysqli_query(
-                $conn,
-                "SELECT * FROM resume LIMIT 1"
-            );
-
-            $resume = mysqli_fetch_assoc(
-                $resume_query
-            );
-
-            ?>
-
-            <a href="uploads/<?php
-                                echo $resume['file'];
-                                ?>"
-
-                download
-
-                class="btn">
-
-                Download CV
+                </span>
 
             </a>
 
-        </div>
+            <nav class="navbar">
 
+                <a href="samrat.php">Home</a>
 
-        <div class="hero-image">
+                <a href="#about">About</a>
 
-            <img src="assets/images/img.png" alt="profile">
+                <a href="#skills">Skills</a>
 
-        </div>
+                <a href="#projects">Projects</a>
 
-    </section>
+                <a href="#certificates">
 
+                    Certificates
 
-    <!-- About Section -->
-    <section class="about" id="about">
+                </a>
 
-        <div class="about-image">
+                <a href="#studyhub">StudyHub</a>
 
-            <img src="assets/images/img.png" alt="about">
+                <a href="#contact">Contact</a>
 
-        </div>
+            </nav>
+            <div class="theme-toggle">
 
-        <div class="about-content">
+                <i class="fa-solid fa-moon"></i>
 
-            <h2>About Me</h2>
-
-            <p>
-                I am a passionate full stack developer and BTech student.
-                I love building responsive and modern websites with clean UI.
-            </p>
-
-            <a href="#" class="btn">Read More</a>
-
-        </div>
-
-    </section>
-
-
-
-
-    <!-- Skills Section -->'
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-
-        <h2 class="section-title">My Skills</h2>
-
-        <div class="skills-container">
-
-            <div class="skill-card">
-                <i class="fa-brands fa-html5"></i>
-                <h3>HTML5</h3>
+            </div>
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
             </div>
 
-            <div class="skill-card">
-                <i class="fa-brands fa-css3-alt"></i>
-                <h3>CSS3</h3>
+        </header>
+        <!-- Navbar End -->
+
+        <!--hero_section-->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <h3>Hello, It's Me</h3>
+
+                <h1>Samrat Prajapati</h1>
+
+                <h2>I'm a <span>Full Stack Developer</span></h2>
+
+                <p id="hero-description">
+                    I create modern responsive websites using
+                    HTML, CSS, JavaScript, PHP and MySQL.
+                </p>
+
+                <div class="social-icons">
+
+                    <a href="https://github.com/samratprajapati"><i
+                            class="fa-brands fa-github"></i></a>
+
+                    <a href="https://linkedin.com/in/samratprajapati"><i
+                            class="fa-brands fa-linkedin"></i></a>
+
+                    <a href="https://instagram.com/mathsamrat"><i
+                            class="fa-brands fa-instagram"></i></a>
+
+                </div>
+
+                <?php
+
+                $resume_query = mysqli_query(
+                $conn,
+                "SELECT * FROM resume LIMIT 1"
+                );
+
+                $resume = mysqli_fetch_assoc(
+                $resume_query
+                );
+
+                ?>
+
+                <a href="uploads/<?php
+                                echo $resume['file'];
+                                ?>"
+                    download
+                    class="btn">
+
+                    Download CV
+
+                </a>
+
             </div>
 
-            <div class="skill-card">
-                <i class="fa-brands fa-js"></i>
-                <h3>JavaScript</h3>
+            <div class="hero-image">
+
+                <img src="assets/images/img.png" alt="profile">
+
             </div>
 
-            <div class="skill-card">
-                <i class="fa-brands fa-php"></i>
-                <h3>PHP</h3>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+
+            <div class="about-image">
+
+                <img src="assets/images/img.png" alt="about">
+
             </div>
 
-        </div>
+            <div class="about-content">
 
-    </section>
-   
+                <h2>About Me</h2>
 
-<!-- Projects Section -->
-<section class="projects" id="projects">
+                <p id="about-description">
+                    I am a passionate full stack developer and BTech student.
+                    I love building responsive and modern websites with clean
+                    UI.
+                </p>
 
-    <h2 class="section-title">
-        Latest Projects
-    </h2>
-    <form method="GET" class="search-form">
+                <a href="#" class="btn">Read More</a>
 
-        <input type="text"
-            name="search"
+            </div>
 
-            placeholder="Search Projects...">
+        </section>
 
-        <button type="submit" class="btn">
+        <!-- Skills Section -->'
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
 
-            Search
+            <h2 class="section-title">My Skills</h2>
 
-        </button>
+            <div class="skills-container">
 
-    </form>
+                <div class="skill-card">
+                    <i class="fa-brands fa-html5"></i>
+                    <h3>HTML5</h3>
+                </div>
 
-    <div class="project-container">
+                <div class="skill-card">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                </div>
 
-        <?php
+                <div class="skill-card">
+                    <i class="fa-brands fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
 
-        if (isset($_GET['search'])) {
+                <div class="skill-card">
+                    <i class="fa-brands fa-php"></i>
+                    <h3>PHP</h3>
+                </div>
 
-            $search = $_GET['search'];
+            </div>
 
-            $select = "SELECT * FROM projects
+        </section>
 
-    WHERE title LIKE '%$search%'
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
 
-    ORDER BY id DESC";
-        } else {
+            <h2 class="section-title">
+                Latest Projects
+            </h2>
+            <form method="GET" class="search-form">
 
-            $select = "SELECT * FROM projects
-    ORDER BY id DESC";
-        }
+                <input type="text"
+                    name="search"
+                    placeholder="Search Projects...">
 
-        $result = mysqli_query($conn, $select);
+                <button type="submit" class="btn">
 
-        while ($row = mysqli_fetch_assoc($result)) {
+                    Search
 
-        ?>
+                </button>
 
-            <div class="project-card"
+            </form>
 
-data-title="<?php
+            <div class="project-container">
+
+                <?php
+
+                if (isset($_GET['search'])) {
+
+                $search = $_GET['search'];
+
+                $select = "SELECT * FROM projects
+
+                WHERE title LIKE '%$search%'
+
+                ORDER BY id DESC";
+                } else {
+
+                $select = "SELECT * FROM projects
+                ORDER BY id DESC";
+                }
+
+                $result = mysqli_query($conn, $select);
+
+                while ($row = mysqli_fetch_assoc($result)) {
+
+                ?>
+
+                <div class="project-card"
+                    data-title="<?php
 echo $row['title'];
 ?>"
-
-data-description="<?php
+                    data-description="<?php
 echo $row['description'];
 ?>"
-
-data-image="uploads/<?php
+                    data-image="uploads/<?php
 echo $row['image'];
 ?>"
-
-data-live="<?php
+                    data-live="<?php
 echo $row['live_demo'];
 ?>"
-
-data-github="<?php
+                    data-github="<?php
 echo $row['github_link'];
 ?>">
 
-    <img src="uploads/<?php
+                    <img src="uploads/<?php
     echo $row['image'];
     ?>">
 
-    <div class="project-info">
+                    <div class="project-info">
 
-        <h3>
-            <?php
-            echo $row['title'];
-            ?>
-        </h3>
+                        <h3>
+                            <?php
+                            echo $row['title'];
+                            ?>
+                        </h3>
 
-        <p>
-            <?php
-            echo $row['description'];
-            ?>
-        </p>
+                        <p>
+                            <?php
+                            echo $row['description'];
+                            ?>
+                        </p>
 
+                        <div class="project-buttons">
 
-        <div class="project-buttons">
-
-            <a href="<?php
+                            <a href="<?php
             echo $row['live_demo'];
             ?>"
+                                target="_blank"
+                                class="live-btn">
 
-            target="_blank"
+                                Live Demo
 
-            class="live-btn">
+                            </a>
 
-                Live Demo
-
-            </a>
-
-
-            <a href="<?php
+                            <a href="<?php
             echo $row['github_link'];
             ?>"
+                                target="_blank"
+                                class="github-btn">
 
-            target="_blank"
+                                GitHub
 
-            class="github-btn">
+                            </a>
 
-                GitHub
+                        </div>
 
-            </a>
+                    </div>
 
-        </div>
+                </div>
 
-    </div>
+                <?php } ?>
 
-</div>
+            </div>
 
-        <?php } ?>
+        </section>
 
-    </div>
+        <!-- Project Modal -->
 
-</section>
+        <div class="project-modal" id="projectModal">
 
+            <div class="modal-content">
 
-<!-- Project Modal -->
+                <span class="close-modal">
 
-<div class="project-modal" id="projectModal">
+                    &times;
 
-    <div class="modal-content">
+                </span>
 
-        <span class="close-modal">
+                <img src
+                    id="modalImage">
 
-            &times;
+                <h2 id="modalTitle"></h2>
 
-        </span>
+                <p id="modalDescription"></p>
 
-        <img src=""
-            id="modalImage">
+                <div class="modal-buttons">
 
-        <h2 id="modalTitle"></h2>
+                    <a href="#"
+                        target="_blank"
+                        id="modalLive"
+                        class="live-btn">
 
-        <p id="modalDescription"></p>
+                        Live Demo
 
-        <div class="modal-buttons">
+                    </a>
 
-            <a href="#"
-                target="_blank"
+                    <a href="#"
+                        target="_blank"
+                        id="modalGithub"
+                        class="github-btn">
 
-                id="modalLive"
+                        GitHub
 
-                class="live-btn">
+                    </a>
 
-                Live Demo
+                </div>
 
-            </a>
-
-
-            <a href="#"
-                target="_blank"
-
-                id="modalGithub"
-
-                class="github-btn">
-
-                GitHub
-
-            </a>
+            </div>
 
         </div>
 
-    </div>
+        <!-- Certificates -->
 
-</div>
+        <section class="notes-page" id="certificates">
 
+            <h2 class="section-title">
 
+                Certificates
 
-    <!-- Certificates -->
+            </h2>
 
-    <section class="notes-page" id="certificates">
+            <div class="notes-container">
 
-        <h2 class="section-title">
+                <?php
 
-            Certificates
-
-        </h2>
-
-
-        <div class="notes-container">
-
-            <?php
-
-            $certificates = mysqli_query(
+                $certificates = mysqli_query(
 
                 $conn,
 
                 "SELECT * FROM certificates
-ORDER BY id DESC"
+                ORDER BY id DESC"
 
-            );
+                );
 
-
-            while ($cert =
+                while ($cert =
                 mysqli_fetch_assoc(
-                    $certificates
+                $certificates
                 )
-            ) {
+                ) {
 
-            ?>
+                ?>
 
                 <div class="notes-card">
 
@@ -464,7 +432,6 @@ ORDER BY id DESC"
 
                     </div>
 
-
                     <h3>
 
                         <?php
@@ -473,13 +440,10 @@ ORDER BY id DESC"
 
                     </h3>
 
-
                     <a href="certificate_uploads/<?php
                                                     echo $cert['file'];
                                                     ?>"
-
                         target="_blank"
-
                         class="download-btn">
 
                         View Certificate
@@ -488,89 +452,82 @@ ORDER BY id DESC"
 
                 </div>
 
-            <?php } ?>
-
-        </div>
-
-    </section>
-
-    <!-- StudyHub Section -->
-
-    <section class="studyhub" id="studyhub">
-
-        <h2 class="section-title">
-            StudyHub
-        </h2>
-
-        <div class="studyhub-container">
-
-
-            <!-- Notes -->
-
-            <div class="study-card">
-
-                <i class="fa-solid fa-book"></i>
-
-                <h3>Notes</h3>
-
-                <p>
-
-                    Download handwritten BTech notes,
-                    semester PDFs and subject-wise study material.
-
-                </p>
-
-                <a href="notes.php" class="study-btn">
-
-                    Download Notes
-
-                </a>
+                <?php } ?>
 
             </div>
 
+        </section>
 
+        <!-- StudyHub Section -->
 
-            <!-- PYQ -->
+        <section class="studyhub" id="studyhub">
 
-            <div class="study-card">
+            <h2 class="section-title">
+                StudyHub
+            </h2>
 
-                <i class="fa-solid fa-file-lines"></i>
+            <div class="studyhub-container">
 
-                <h3>PYQ</h3>
+                <!-- Notes -->
 
-                <p>
+                <div class="study-card">
 
-                    Previous Year Question Papers
-                    for semester exams and university preparation.
+                    <i class="fa-solid fa-book"></i>
 
-                </p>
+                    <h3>Notes</h3>
 
-                <a href="pyq.php" class="study-btn">
+                    <p>
 
-                    View PYQs
+                        Download handwritten BTech notes,
+                        semester PDFs and subject-wise study material.
 
-                </a>
+                    </p>
+
+                    <a href="notes.php" class="study-btn">
+
+                        Download Notes
+
+                    </a>
+
+                </div>
+
+                <!-- PYQ -->
+
+                <div class="study-card">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <h3>PYQ</h3>
+
+                    <p>
+
+                        Previous Year Question Papers
+                        for semester exams and university preparation.
+
+                    </p>
+
+                    <a href="pyq.php" class="study-btn">
+
+                        View PYQs
+
+                    </a>
+
+                </div>
 
             </div>
 
-        </div>
+        </section>
+        <!-- Contact Section -->
+        <?php
+        include 'contact.php';
+        ?>
 
-    </section>
-    <!-- Contact Section -->
-    <?php
-    include 'contact.php';
-    ?>
+        <!-- Footer -->
+        <?php include 'footer.php'; ?>
 
+        <!-- JS -->
+        <script src="assets/js/script.js"></script>
 
-
-
-    <!-- Footer -->
-    <?php include 'footer.php'; ?>
-
-
-    <!-- JS -->
-    <script src="assets/js/script.js"></script>
-
-</body>
+    </body>
 
 </html>

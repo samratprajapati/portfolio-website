@@ -600,123 +600,8 @@ section{
 
 }
 
-/* =========================
-   MOBILE NAVBAR LIGHT MODE
-========================= */
-
-@media(max-width:768px){
-
-    
-
-    body.light-mode .navbar{
-
-        background: white !important;
-
-    }
-
-    body.light-mode .navbar a{
-
-        color: #0f172a !important;
-
-    }
-
-    body.light-mode .navbar a:hover{
-
-        color: #38bdf8 !important;
-
-    }
-
-    body.light-mode .menu-btn{
-
-        color: #0f172a;
-
-    }
-
-}
-   /* =========================
-   MOBILE NAVBAR FIX
-========================= */
-
-@media(max-width:768px){
-
-    .header{
-
-        overflow: visible;
-
-    }
-    .header .theme-toggle{
-        position: relative;
-        right: 5px;
-    }
-
-    .navbar{
-
-        position: fixed;
-
-        top: 80px;
-
-        left: -100%;
-
-        width: 100%;
-
-        max-height: calc(100vh - 80px);
-
-        overflow-y: auto;
-
-        background: #020617;
-
-        display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-        flex-direction: column;
-
-        padding: 20px;
-
-        transition: left 0.3s ease;
-
-        z-index: 9999;
-
-    }
-
-    .navbar.active{
-
-        left: 0;
-
-    }
-
-    .navbar a{
-
-        display: block;
-
-        padding: 15px 0;
-
-        font-size: 18px;
-
-    }
-
-}
 
 
-/* =========================
-   LIGHT MODE
-========================= */
-
-@media(max-width:768px){
-
-    body.light-mode .navbar{
-
-        background: white;
-
-    }
-
-    body.light-mode .navbar a{
-
-        color: #0f172a;
-
-    }
-
-}
 
 /* Admin Table */
 
@@ -1901,115 +1786,6 @@ body.light-mode .footer{
 
 
 
-/* =========================
-   MOBILE MENU
-========================= */
-
-@media(max-width:768px){
-
-    
-
-    /* Hero */
-
-    .hero h1{
-
-        font-size: 5rem;
-
-    }
-
-    .hero h2{
-
-        font-size: 3rem;
-
-    }
-
-    .hero p{
-
-        font-size: 1.6rem;
-
-    }
-
-    .hero-image img{
-
-        width: 280px;
-
-    }
-
-
-    /* About */
-
-    .about-content h2{
-
-        font-size: 4rem;
-
-    }
-
-    .about-image img{
-
-        width: 280px;
-
-    }
-
-
-    /* Section Title */
-
-    .section-title{
-
-        font-size: 4rem;
-
-    }
-
-
-    /* Search */
-
-    .search-form{
-
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-    .search-form input{
-
-        width: 100%;
-
-    }
-
-
-    /* Project Buttons */
-
-    .project-buttons{
-
-        flex-direction: column;
-
-    }
-
-    .project-buttons a{
-
-        width: 100%;
-        text-align: center;
-
-    }
-
-
-    /* Modal */
-
-    .modal-content{
-
-        padding: 20px;
-
-    }
-
-
-    /* Footer */
-
-    .footer{
-
-        text-align: center;
-
-    }
-
-}
 
 
 
@@ -2836,65 +2612,7 @@ table tr:hover{
 }
 
 
-/* Mobile */
 
-@media(max-width:768px){
-
-    
-   
-
-    .hero{
-
-        padding: 140px 5% 60px;
-
-    }
-
-    .hero-content h1{
-
-        font-size: 42px;
-
-    }
-
-    .hero-content h2{
-
-        font-size: 28px;
-
-    }
-
-    .hero-image img{
-
-        width: 260px;
-
-    }
-
-    .section-title{
-
-        font-size: 34px;
-
-    }
-
-    .project-container,
-    .skills-container,
-    .stats-container,
-    .notes-container{
-
-        grid-template-columns: 1fr;
-
-    }
-
-    .search-form{
-
-        flex-direction: column;
-
-    }
-
-    .search-form input{
-
-        width: 100%;
-
-    }
-
-}
 
 
 /* Small Mobile */
@@ -2968,53 +2686,8 @@ table tr:hover{
 }
 
 
-/* Sidebar Responsive */
 
-@media(max-width:768px){
 
-    .sidebar{
-
-        width: 80px;
-
-        padding: 20px 10px;
-
-    }
-
-    .sidebar ul li a{
-
-        font-size: 0;
-
-        justify-content: center;
-
-    }
-
-    .sidebar ul li a i{
-
-        font-size: 20px;
-
-    }
-
-    .admin-profile h3,
-    .admin-profile p{
-
-        display: none;
-
-    }
-
-    .admin-profile img{
-
-        width: 50px;
-        height: 50px;
-
-    }
-
-    .main-content{
-
-        margin-left: 80px;
-
-    }
-
-}
 
 
 /* Table Responsive */
@@ -3244,5 +2917,374 @@ table tr:hover{
 
     }
 
-}
 
+
+/* =========================
+   LIGHT MODE MOBILE NAVBAR FIX
+========================= */
+
+
+
+    body.light-mode .navbar{
+
+        background: white !important;
+         color: #0f172a !important;
+
+    }
+
+    body.light-mode .navbar.active{
+
+        background: white !important;
+
+    }
+
+    body.light-mode .navbar a{
+
+        color: #0f172a !important;
+
+    }
+
+    body.light-mode .navbar a:hover{
+
+        color: #38bdf8 !important;
+
+    }
+
+    body.light-mode .menu-btn{
+
+        color: #0f172a !important;
+
+    }
+/* Sidebar Responsive */
+
+
+
+    .sidebar{
+
+        width: 80px;
+
+        padding: 20px 10px;
+
+    }
+
+    .sidebar ul li a{
+
+        font-size: 0;
+
+        justify-content: center;
+
+    }
+
+    .sidebar ul li a i{
+
+        font-size: 20px;
+
+    }
+
+    .admin-profile h3,
+    .admin-profile p{
+
+        display: none;
+
+    }
+
+    .admin-profile img{
+
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .main-content{
+
+        margin-left: 80px;
+
+    }
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+
+
+    
+
+    /* Hero */
+
+    .hero h1{
+
+        font-size: 5rem;
+
+    }
+
+    .hero h2{
+
+        font-size: 3rem;
+
+    }
+
+    .hero p{
+
+        font-size: 1.6rem;
+
+    }
+
+    .hero-image img{
+
+        width: 280px;
+
+    }
+
+
+    /* About */
+
+    .about-content h2{
+
+        font-size: 4rem;
+
+    }
+
+    .about-image img{
+
+        width: 280px;
+
+    }
+
+
+    /* Section Title */
+
+    .section-title{
+
+        font-size: 4rem;
+
+    }
+
+
+    /* Search */
+
+    .search-form{
+
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .search-form input{
+
+        width: 100%;
+
+    }
+
+
+    /* Project Buttons */
+
+    .project-buttons{
+
+        flex-direction: column;
+
+    }
+
+    .project-buttons a{
+
+        width: 100%;
+        text-align: center;
+
+    }
+
+
+    /* Modal */
+
+    .modal-content{
+
+        padding: 20px;
+
+    }
+
+
+    /* Footer */
+
+    .footer{
+
+        text-align: center;
+
+    }
+
+
+
+
+    
+/* Mobile */
+
+
+
+    .hero{
+
+        padding: 140px 5% 60px;
+
+    }
+
+    .hero-content h1{
+
+        font-size: 42px;
+
+    }
+
+    .hero-content h2{
+
+        font-size: 28px;
+
+    }
+
+    .hero-image img{
+
+        width: 260px;
+
+    }
+
+    .section-title{
+
+        font-size: 34px;
+
+    }
+
+    .project-container,
+    .skills-container,
+    .stats-container,
+    .notes-container{
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .search-form{
+
+        flex-direction: column;
+
+    }
+
+    .search-form input{
+
+        width: 100%;
+
+    }
+
+
+    
+   /* =========================
+   MOBILE NAVBAR FIX
+========================= */
+
+
+
+    .header{
+
+        overflow: visible;
+
+    }
+    .header .theme-toggle{
+        position: relative;
+        right: 5px;
+    }
+
+    .navbar{
+
+        position: fixed;
+
+        top: 80px;
+
+        left: -100%;
+
+        width: 100%;
+
+        max-height: calc(100vh - 80px);
+
+        overflow-y: auto;
+
+        background: #1e293b;
+
+        display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+        flex-direction: column;
+
+        padding: 20px;
+
+        transition: left 0.3s ease;
+
+        z-index: 9999;
+
+    }
+
+    .navbar.active{
+
+        left: 0;
+
+    }
+
+    .navbar a{
+
+        display: block;
+
+        padding: 15px 0;
+
+        font-size: 18px;
+
+    }
+
+
+
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+
+
+    body.light-mode .navbar{
+
+        background: white;
+
+    }
+
+    body.light-mode .navbar a{
+
+        color: #0f172a;
+
+    }
+
+
+    
+/* =========================
+   MOBILE NAVBAR LIGHT MODE
+========================= */
+
+
+    
+
+    body.light-mode .navbar{
+
+        background: white !important;
+
+    }
+
+    body.light-mode .navbar a{
+
+        color: #0f172a !important;
+
+    }
+
+    body.light-mode .navbar a:hover{
+
+        color: #38bdf8 !important;
+
+    }
+
+    body.light-mode .menu-btn{
+
+        color: #0f172a;
+
+    }
+
+}
